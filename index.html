@@ -395,7 +395,8 @@
 <div class="carousel carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
     
 
-    <div class="carousel-item  white-text bg-cover about-cover">
+    <!-- 首页顶部封面区域（无文章封面时显示） -->
+    <div class="carousel-item white-text bg-cover about-cover">
         <div class="container">
             <div class="row">
   <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
@@ -448,17 +449,20 @@
 
 
 
+            <!-- 首页按钮区域 -->
             <div class="cover-btns">
+                <!-- 开始阅读按钮 -->
                 <a href="#indexCard" class="waves-effect waves-light btn">
-                    <i class="fa fa-angle-double-down"></i>开始阅读
+                    <i class="fa fa-angle-double-down"></i> 开始阅读
                 </a>
 
-                
-                    <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light btn" target="_blank">
-                        <i class="fab fa-github-alt"></i>Github
-                    </a>
-                
+                <!-- 自定义资源宝库按钮 -->
+                <a href="/resources" class="waves-effect waves-light btn" target="_blank">
+                    <i class="fa fa-book"></i> 资源宝库
+                </a>
             </div>
+
+            <!-- 社交链接区域 -->
             <div class="cover-social-link">
 
 
@@ -478,42 +482,41 @@
         </div>
     </div>
 
+    <!-- 遍历所有设置了封面的文章，显示为轮播项 -->
     
 </div>
 
+<!-- 初始化轮播图逻辑 -->
 <script>
     $(function () {
         let coverSlider = $('.carousel');
+        let initUserPressedOrDraggedActive = false;
 
-        //用户触摸轮播自动 restartPlay 是否生效
-        let initUserPressedOrDraggedActive = false
-
-        //用户触摸轮播自动 restartPlay
+        // 用户滑动后自动恢复轮播
         function initUserPressedOrDragged(instance) {
             setInterval(() => {
                 if (instance.pressed || instance.dragged) {
-                    // console.log('initUserPressedOrDragged: ',instance.pressed,instance.dragged)
-                    restartPlay()
+                    restartPlay();
                 }
-            }, 1000)
+            }, 1000);
         }
 
+        // 初始化轮播图
         coverSlider.carousel({
             duration: Number('120'),
             fullWidth: true,
             indicators: 'true' === 'true',
             onCycleTo() {
                 if (!initUserPressedOrDraggedActive) {
-                    // console.log('initUserPressedOrDraggedActive')
-                    initUserPressedOrDragged(this)
-                    initUserPressedOrDraggedActive = true
+                    initUserPressedOrDragged(this);
+                    initUserPressedOrDraggedActive = true;
                 }
             },
-        })
+        });
 
+        // 自动轮播控制
         let carouselIntervalId;
         
-        // Loop to call the next cover article picture.
         let autoCarousel = function () {
             carouselIntervalId = setInterval(function () {
                 coverSlider.carousel('next');
@@ -527,10 +530,10 @@
             clearInterval(carouselIntervalId);
             autoCarousel();
             
-        };
+        }
 
+        // 左右按钮控制轮播
         
-        // prev and next cover post.
         $('#prev-cover').click(function () {
             coverSlider.carousel('prev');
             restartPlay();
@@ -750,7 +753,7 @@
                         var today = new Date();
                         var startYear = "2025";
                         var startMonth = "6";
-                        var startDate = "23";
+                        var startDate = "28";
                         var startHour = "21";
                         var startMinute = "56";
                         var startSecond = "6";
