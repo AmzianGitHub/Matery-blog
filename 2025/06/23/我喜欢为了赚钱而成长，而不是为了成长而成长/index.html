@@ -56,17 +56,27 @@
 
 
 <body>
-    <header class="navbar-fixed">
+    <header class="navbar-fixed"> 
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
-            <div class="brand-logo">
-                <a href="/" class="waves-effect waves-light">
+
+            <!-- LOGO + 标题靠左显示 -->
+            <div class="brand-logo" style="float: left; margin-left: 0;">
+                <a href="/" class="waves-effect waves-light" style="display: flex; align-items: center;">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <!-- 如果启用了 logo，显示图片 -->
                     
-                    <span class="logo-span">心中之城</span>
+                        <img src="/medias/logo.png" class="logo-img" alt="LOGO" style="height: 32px; margin-right: 8px;">
+                    
+
+                    <!-- 显示站点标题，比如“心中之城” -->
+                    <span class="logo-span" style="font-weight: bold; font-size: 1.5rem;">
+                        心中之城
+                    </span>
                 </a>
             </div>
+
+            <!-- 导航菜单（默认靠右显示） -->
             
 
 <a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
@@ -289,8 +299,10 @@
 </div>
 
 
+
         </div>
 
+        <!-- GitHub按钮（如果启用了 theme.githubLink） -->
         
             <style>
     .nav-transparent .github-corner {
@@ -349,7 +361,6 @@
 </a>
         
     </nav>
-
 </header>
 
     
