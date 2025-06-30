@@ -41,7 +41,23 @@
     font-size: 2.4rem;
 }
 
-/* ✅ 去除首页背景图的黑色滤色遮罩 */
-.bg-cover::before {
-    display: none;
+/* —— 以下样式强制移除首页背景图上的滤镜 —— */
+
+/* 去除伪元素遮罩 */
+.bg-cover::before,
+.about-cover::before,
+.carousel-item::before {
+    content: none !important;
+    display: none !important;
+    background: none !important;
+    background-color: transparent !important;
+}
+
+/* 去除背景色和滤镜 */
+.bg-cover,
+.about-cover,
+.carousel-item {
+    background-color: transparent !important;
+    background-image: none !important;
+    filter: none !important;
 }
