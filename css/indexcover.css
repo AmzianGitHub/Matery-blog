@@ -1,3 +1,4 @@
+/* 首页封面轮播左右控制按钮样式 */
 .carousel-control {
     width: 45px;
     height: 45px;
@@ -20,7 +21,7 @@
 #next-cover {
     position: absolute;
     top: 48%;
-    right: 8px;;
+    right: 8px;
 }
 
 #prev-cover i {
@@ -32,10 +33,15 @@
 }
 
 .carousel-control:hover {
-    background-color: rgba(0, 0, 0, .4);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .carousel-control i {
     color: #fff;
     font-size: 2.4rem;
+}
+
+/* ✅ 去除首页背景图的黑色滤色遮罩 */
+.bg-cover::before {
+    display: none;
 }
