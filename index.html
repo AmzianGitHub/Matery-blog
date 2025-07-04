@@ -125,7 +125,7 @@
       
       <i class="fas fa-home" style="zoom: 0.6;"></i>
       
-      <span>城门</span>
+      <span>首页</span>
     </a>
     
   </li>
@@ -137,17 +137,17 @@
       
       <i class="fas fa-book" style="zoom: 0.6;"></i>
       
-      <span>城记</span>
+      <span>文章</span>
       <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
     </a>
     <ul class="sub-nav menus_item_child ">
       
       <li>
-        <a href="/tags">
+        <a href="/archives">
           
-          <i class="fas fa-tags" style="margin-top: -20px; zoom: 0.6;"></i>
+          <i class="fas fa-archive" style="margin-top: -20px; zoom: 0.6;"></i>
           
-          <span>标签</span>
+          <span>归档</span>
         </a>
       </li>
       
@@ -161,11 +161,11 @@
       </li>
       
       <li>
-        <a href="/archives">
+        <a href="/tags">
           
-          <i class="fas fa-archive" style="margin-top: -20px; zoom: 0.6;"></i>
+          <i class="fas fa-tags" style="margin-top: -20px; zoom: 0.6;"></i>
           
-          <span>归档</span>
+          <span>标签</span>
         </a>
       </li>
       
@@ -197,11 +197,11 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/submit" class="waves-effect waves-light">
+    <a href="/submissions" class="waves-effect waves-light">
       
-      <i class="fas fa-paper-plane" style="zoom: 0.6;"></i>
+      <i class="fas fa-file-alt" style="zoom: 0.6;"></i>
       
-      <span>投稿</span>
+      <span>稿展</span>
     </a>
     
   </li>
@@ -252,7 +252,7 @@
 			
 			    <i class="fa-fw fas fa-home"></i>
 			
-			城门
+			首页
 		</a>
           
         </li>
@@ -263,18 +263,18 @@
 			
 				<i class="fa-fw fas fa-book"></i>
 			
-			城记
+			文章
 			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
 		</a>
             <ul  style="background:  ;" >
               
                 <li>
 
-                  <a href="/tags " style="margin-left:75px">
+                  <a href="/archives " style="margin-left:75px">
 				  
-				   <i class="fa fas fa-tags" style="position: absolute;left:50px" ></i>
+				   <i class="fa fas fa-archive" style="position: absolute;left:50px" ></i>
 			      
-		          <span>标签</span>
+		          <span>归档</span>
                   </a>
                 </li>
               
@@ -290,11 +290,11 @@
               
                 <li>
 
-                  <a href="/archives " style="margin-left:75px">
+                  <a href="/tags " style="margin-left:75px">
 				  
-				   <i class="fa fas fa-archive" style="position: absolute;left:50px" ></i>
+				   <i class="fa fas fa-tags" style="position: absolute;left:50px" ></i>
 			      
-		          <span>归档</span>
+		          <span>标签</span>
                   </a>
                 </li>
               
@@ -326,11 +326,11 @@
         
         <li class="m-nav-item">
 	  
-		<a href="/submit" class="waves-effect waves-light">
+		<a href="/submissions" class="waves-effect waves-light">
 			
-			    <i class="fa-fw fas fa-paper-plane"></i>
+			    <i class="fa-fw fas fa-file-alt"></i>
 			
-			投稿
+			稿展
 		</a>
           
         </li>
@@ -363,17 +363,17 @@
 
 
 <!-- 首页封面区域 -->
-<div class="index-cover bg-cover"
-     style="background-image: url('/medias/featureimages/09.jpg'); 
-            background-size: cover; 
-            background-position: center; 
-            background-repeat: no-repeat; 
-            margin-top: -64px;">
+<div class="index-cover bg-cover" id="dynamicCover"
+     style="background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-top: -64px;
+            ">
+  
+  <div class="container">
 
-    <div class="container">
-
-        <!-- 封面中央内容块（如标题、副标题） -->
-        <div class="row">
+    <!-- 封面中央内容块（如标题、副标题） -->
+    <div class="row">
   <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
     <div class="brand">
       <!-- 主标题（静态标题） -->
@@ -424,21 +424,19 @@
 
 
 
-        <!-- 首页按钮区域 -->
-        <div class="cover-btns">
-            <a href="#indexCard" class="waves-effect waves-light btn">
-                <i class="fa fa-angle-double-down"></i> 开始阅读
-            </a>
-            <a href="/resources" class="waves-effect waves-light btn" target="_blank">
-                <i class="fa fa-book"></i> 资源宝库
-            </a>
-        </div>
+    <!-- 首页按钮区域 -->
+    <div class="cover-btns">
+        <a href="#indexCard" class="waves-effect waves-light btn">
+            <i class="fa fa-angle-double-down"></i> 开始阅读
+        </a>
+        <a href="/resources" class="waves-effect waves-light btn" target="_blank">
+            <i class="fa fa-book"></i> 资源宝库
+        </a>
+    </div>
 
-        <!-- 社交链接区域 -->
-        <div class="cover-social-link">
-            
-
-
+    <!-- 社交链接区域 -->
+    <div class="cover-social-link">
+        
 
 
 
@@ -452,10 +450,39 @@
 
 
 
-        </div>
+
 
     </div>
+
+  </div>
 </div>
+
+
+<script>
+  const coverImages = ["/medias/featureimages/01.jpg","/medias/featureimages/02.jpg","/medias/featureimages/03.jpg","/medias/featureimages/04.jpg","/medias/featureimages/05.jpg","/medias/featureimages/06.jpg","/medias/featureimages/07.jpg","/medias/featureimages/08.jpg","/medias/featureimages/09.jpg","/medias/featureimages/10.jpg","/medias/featureimages/11.jpg","/medias/featureimages/12.jpg","/medias/featureimages/13.jpg","/medias/featureimages/14.jpg","/medias/featureimages/15.jpg","/medias/featureimages/16.jpg","/medias/featureimages/17.jpg","/medias/featureimages/18.jpg","/medias/featureimages/19.jpg","/medias/featureimages/20.jpg","/medias/featureimages/21.jpg","/medias/featureimages/22.jpg"];
+
+  function getDayOfYear() {
+    const now = new Date();
+    const start = new Date(now.getFullYear(), 0, 0);
+    const diff = now - start;
+    const oneDay = 1000 * 60 * 60 * 24;
+    return Math.floor(diff / oneDay);
+  }
+
+  function setDailyCover() {
+    const day = getDayOfYear();
+    const index = day % coverImages.length;
+    const imagePath = coverImages[index];
+    const fullUrl = '/' + imagePath.replace(/^\//, '');
+    const el = document.getElementById('dynamicCover');
+    if (el) {
+      el.style.backgroundImage = `url('${fullUrl}')`;
+    }
+  }
+
+  setDailyCover();
+</script>
+
 
 
 
@@ -505,6 +532,66 @@
     <!-- 所有文章卡片 -->
     <article id="articles" class="container articles">
         <div class="row article-row">
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2025/07/04/2209103712/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="掌握复制的力量，赚钱变得不再困难">
+                            
+                            <span class="card-title">掌握复制的力量，赚钱变得不再困难</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                赚钱到底难不难？说难，是因为你不懂流量；说简单，是因为有人掌握了方法。
+我身边很多朋友早就买房买车了，你知道他们的共同点是什么吗？他们都会“搞流量”。
+怎么搞？无非三种方式：发帖子、做视频、录音频。
+我个人偏爱发帖。可不是简单地 Ctrl+
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2025-07-04
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%B5%81%E9%87%8F%E5%8F%98%E7%8E%B0/" class="post-category">
+                                    流量变现
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E5%86%85%E5%AE%B9%E5%A4%8D%E5%88%B6/">
+                            <span class="chip bg-color">内容复制</span>
+                        </a>
+                        
+                        <a href="/tags/%E5%BC%95%E6%B5%81%E6%8A%80%E5%B7%A7/">
+                            <span class="chip bg-color">引流技巧</span>
+                        </a>
+                        
+                        <a href="/tags/%E5%89%AF%E4%B8%9A%E8%B5%9A%E9%92%B1/">
+                            <span class="chip bg-color">副业赚钱</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
             
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
@@ -650,7 +737,7 @@
             // 从主题配置读取建站时间 / Read site start time from config
             var startYear = "2025";
             var startMonth = "7";
-            var startDate = "2";
+            var startDate = "3";
             var startHour = "6";
             var startMinute = "6";
             var startSecond = "6";
