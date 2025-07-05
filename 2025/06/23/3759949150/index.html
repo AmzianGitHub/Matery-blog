@@ -56,6 +56,9 @@
 
 
 <body>
+    <!-- ✅ 全局背景层：初始透明，滚动时渐显 -->
+    <div id="global-bg"></div>
+
     <header class="navbar-fixed"> 
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
@@ -791,7 +794,7 @@
 
     <footer class="page-footer bg-color">
 
-  <!-- 如果启用了固定音乐播放器，则加载 music 部件 / Load fixed music widget if enabled -->
+  <!-- 🎵 固定音乐播放器 / Fixed music widget -->
   
     <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
 <style>
@@ -848,72 +851,54 @@
 
   
 
-  <!-- 网站底部主容器 / Footer main container -->
+  <!-- 📦 主体容器 -->
   <div class="container row center-align"
        style="margin-bottom: 15px !important;">
 
-    <!-- 底部版权与统计信息 / Copyright and Statistics -->
+    <!-- 📄 版权与统计信息 -->
     <div class="col s12 copy-right center-align">
-
       
 
-      <!-- ✅ 自定义版权信息：© 年份 By 心中之城 -->
+      <!-- ⓒ 版权显示 -->
       © 2025 By 心中之城
 
-      <!-- ✅ 显示动态运行天数（将由 JS 脚本填充） -->
+      <!-- 📆 网站运行天数 -->
       | <span id="sitetime">本站已运行 ... 天</span>
 
-      <!-- ✅ 显示动态访问量（由 Busuanzi 填充） -->
+      <!-- 👁️ 总访问量 -->
       | <i class="far fa-eye" title="访问量"></i>
       <span id="busuanzi_value_site_pv" class="white-color"></span>
 
-      <!-- ✅ JS 脚本：计算运行天数并显示 / JavaScript to calculate site run days -->
+      <!-- 🧮 JS 脚本：计算运行天数 -->
       
         <script>
           var calcSiteTime = function () {
             var today = new Date();
-
-            // 从主题配置读取建站时间 / Read site start time from config
             var startYear = "2025";
             var startMonth = "7";
             var startDate = "3";
             var startHour = "6";
             var startMinute = "6";
             var startSecond = "6";
-
-            // 当前时间分解 / Current time
-            var todayYear = today.getFullYear();
-            var todayMonth = today.getMonth() + 1;
-            var todayDate = today.getDate();
-            var todayHour = today.getHours();
-            var todayMinute = today.getMinutes();
-            var todaySecond = today.getSeconds();
-
-            // 计算两个时间戳差值 / Difference in milliseconds
             var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
-            var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+            var t2 = Date.UTC(today.getFullYear(), today.getMonth() + 1, today.getDate(), today.getHours(), today.getMinutes(), today.getSeconds());
             var diff = t2 - t1;
-
-            var days = Math.floor(diff / (1000 * 60 * 60 * 24)); // 计算天数 / Calculate days
-
-            // 显示内容 / Output
+            var days = Math.floor(diff / (1000 * 60 * 60 * 24));
             var lang = 'zh-CN';
-            var text = (lang === 'zh-CN' || lang === 'zh-HK') 
-              ? '本站已运行 ' + days + ' 天' 
+            var text = (lang === 'zh-CN' || lang === 'zh-HK')
+              ? '本站已运行 ' + days + ' 天'
               : 'This site has been running for ' + days + ' days';
-
             document.getElementById("sitetime").innerHTML = text;
           };
-
           calcSiteTime();
         </script>
       
 
-      <!-- ✅ ICP 备案信息（如果启用） -->
+      <!-- 📌 ICP 备案信息 -->
       
     </div>
 
-    <!-- 社交链接（如启用）/ Social media links -->
+    <!-- 🔗 社交链接 -->
     <div class="col s12 m4 l4 social-link">
       
 
@@ -935,11 +920,27 @@
   </div>
 </footer>
 
-<!-- 页面滚动进度条 / Scroll progress bar -->
+<!-- 📊 页面滚动进度条 -->
 <div class="progress-bar"></div>
 
-<!-- ✅ 引入 Busuanzi 统计脚本（访问量） -->
+<!-- 👁️‍🗨️ 引入 Busuanzi 统计脚本 -->
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!-- 🌌 背景滚动显示控制 -->
+<script>
+  (function () {
+    var bg = document.getElementById('global-bg');
+    var triggerHeight = 100;
+    window.addEventListener('scroll', function () {
+      if (!bg) return;
+      if (window.scrollY > triggerHeight) {
+        bg.classList.add('visible');
+      } else {
+        bg.classList.remove('visible');
+      }
+    });
+  })();
+</script>
 
 
     <!-- 搜索遮罩框 -->
@@ -1088,6 +1089,21 @@
 </div>
 
 
+    <!-- ✅ 插入控制全局背景渐显的脚本 -->
+    <script>
+      (function () {
+        var bg = document.getElementById('global-bg');
+        var triggerHeight = 100;
+        window.addEventListener('scroll', function () {
+          if (window.scrollY > triggerHeight) {
+            bg.classList.add('visible');
+          } else {
+            bg.classList.remove('visible');
+          }
+        });
+      })();
+    </script>
+
     <script src="/libs/materialize/materialize.min.js"></script>
     <script src="/libs/masonry/masonry.pkgd.min.js"></script>
     <script src="/libs/aos/aos.js"></script>
@@ -1098,13 +1114,11 @@
     
 
     
-    
+
     
 
-    <!-- 雪花特效 -->
     
 
-    <!-- 鼠标星星特效 -->
     
 
      
@@ -1131,9 +1145,11 @@
     })();
 </script>
 
+
     
     <script src="/libs/others/clicklove.js" async="async"></script>
     
+
     
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
     
@@ -1142,8 +1158,8 @@
 
     
 
-    <!--腾讯兔小巢-->
     
+
     
 
     
@@ -1155,5 +1171,4 @@
     
 
 </body>
-
 </html>

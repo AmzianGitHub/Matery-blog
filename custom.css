@@ -1,0 +1,36 @@
+.index-cover {
+  display: none;
+}
+body {
+  background: url("/medias/banner/bg1.jpg") no-repeat center center fixed;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+}
+#content-outer {
+  background: transparent;
+}
+.bg-cover::before,
+.index-cover::before,
+.page-bg::before {
+  background: none !important;
+}
+.main-content,
+.card,
+.page,
+.index-content,
+.post-content {
+  background-color: rgba(255,255,255,0.92);
+}
+.gitalk-container,
+#toc {
+  background-color: rgba(255,255,255,0.95);
+  backdrop-filter: blur(4px);
+}
+@media screen and (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+  }
+}

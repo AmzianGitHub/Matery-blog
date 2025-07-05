@@ -34,12 +34,9 @@
 }
 
 body {
-    background-color: #eaeaea;
-    margin: 0;
-    color: #34495e;
-    overflow-x: hidden;
-    overflow-y: auto;
+  background-color: transparent !important;
 }
+
 
 h1 {
     margin: 48px 0 22px -5px;
@@ -2242,4 +2239,28 @@ body.DarkMode .theme-btn:hover {
     font-family:'Font Awesome 5 Free';
     font-weight: 900;
     color: #d9534f;
+}
+
+html {
+  background: url('/images/bg1.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* 全局背景层样式 */
+#global-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('/images/bg1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 1s ease;
+  z-index: -9999;
+  pointer-events: none;
+}
+
+#global-bg.visible {
+  opacity: 1;
 }
