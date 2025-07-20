@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html lang="zh-CN">
-
+  
 
 <head>
     <meta charset="utf-8">
@@ -92,7 +92,13 @@
 <meta name="generator" content="Hexo 7.3.0"></head>
 
 
-<body>
+  <head>
+    <!-- 原有 head 内容已包含在 _partial/head 中 -->
+    <!-- 这里额外加入自定义样式 -->
+    <link rel="stylesheet" href="/css/my.css">
+  </head>
+
+  <body>
     <!-- ✅ 全局背景层：初始透明，滚动时渐显 -->
     <div id="global-bg"></div>
 
@@ -363,7 +369,7 @@
 </header>
 
     
-
+  
 
 <!-- 首页封面区域 -->
 <div class="index-cover bg-cover" id="dynamicCover"
@@ -489,15 +495,18 @@
 
 
 
-<main class="content">
 
-    
-    <div id="indexCard" class="index-card">
-        <div class="container ">
-            <div class="card">
-                <div class="card-content">
-                    
-                        <div class="dream">
+
+<main class="index container">
+
+  <div class="two-columns">
+
+    <div class="left-column">
+      <section>
+        
+          <div class="index-card card">
+            <div class="card-content">
+              <div class="dream">
     
     <div class="title center-align">
         <i class="far fa-lightbulb"></i>&nbsp;&nbsp;心中之城
@@ -510,279 +519,371 @@
     </div>
 </div>
 
-                    
-
-                    
-
-                    
-
-                    
-                    <div id="recommend-sections" class="recommend">
-                        
+              
+              
+              <div class="recommend">
 
 
-
-                    </div>
-                    
-                </div>
+</div>
             </div>
-        </div>
-    </div>
-    
+          </div>
+        
 
-    
-
-    <!-- 所有文章卡片 -->
-    <article id="articles" class="container articles">
-        <div class="row article-row">
-            
-             <!-- 隐藏某个文章 -->
-
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2025/07/08/3759949150/">
-                        <div class="card-image">
-
-                            
-
-                            <img src="/medias/featureimages/2025.jpg" class="responsive-img" alt="别困在“成长”的幻觉里，先为赚钱赋能自己">
-                            <span class="card-title">别困在“成长”的幻觉里，先为赚钱赋能自己</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                我们从小就被告知：只要努力，命运就会回馈。但多年后你会发现，加班熬夜、年终冲刺、绩效打拼……很多人依旧困在原地。他们眼中所谓的“成长”，不过是为别人卖力，却从没想过真正为自己赚钱。
+        <article id="articles" class="articles">
+          
+          <div class="card article" style="margin-bottom: 30px;">
+            <a href="/2025/07/08/3759949150/" style="text-decoration: none;">
+              <h3 style="margin: 20px; font-size: 1.6em;">别困在“成长”的幻觉里，先为赚钱赋能自己</h3>
+            </a>
+            <div class="card-content article-content" style="padding: 0 20px 10px 20px;">
+              <div class="summary block-with-text" style="margin-bottom: 10px;">
+                
+                  我们从小就被告知：只要努力，命运就会回馈。但多年后你会发现，加班熬夜、年终冲刺、绩效打拼……很多人依旧困在原地。他们眼中所谓的“成长”，不过是为别人卖力，却从没想过真正为自己赚钱。
 你是否曾这样想过：别人开着宝马奔驰，是不是因为当了老板？我
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2025-07-08
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E5%88%9B%E4%B8%9A%E6%80%9D%E7%BB%B4/" class="post-category">
-                                    创业思维
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
+                
+              </div>
+              <div class="publish-info" style="font-size: 0.85em; color: gray;">
+                <span class="publish-date"><i class="far fa-clock fa-fw icon-date"></i>2025-07-08</span>
+                <span class="publish-author" style="margin-left: 10px;">
+                  
+                    <i class="fas fa-bookmark fa-fw icon-category"></i>
                     
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E8%87%AA%E6%88%91%E6%88%90%E9%95%BF/">
-                            <span class="chip bg-color">自我成长</span>
-                        </a>
-                        
-                        <a href="/tags/%E8%B5%9A%E9%92%B1%E9%80%BB%E8%BE%91/">
-                            <span class="chip bg-color">赚钱逻辑</span>
-                        </a>
-                        
-                        <a href="/tags/%E6%89%A7%E8%A1%8C%E5%8A%9B/">
-                            <span class="chip bg-color">执行力</span>
-                        </a>
-                        
-                    </div>
+                      <a href="/categories/%E5%88%9B%E4%B8%9A%E6%80%9D%E7%BB%B4/" class="post-category">创业思维</a>
                     
-                </div>
+                  
+                </span>
+              </div>
             </div>
-
-             <!-- 隐藏某个文章 -->
             
-             <!-- 隐藏某个文章 -->
-
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2025/07/08/4056063866/">
-                        <div class="card-image">
-
-                            
-
-                            <img src="/medias/featureimages/2025.jpg" class="responsive-img" alt="判断一个人值不值得信赖，看他是否“让人安心”">
-                            <span class="card-title">判断一个人值不值得信赖，看他是否“让人安心”</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                我们总说“识人不难”，可真正想判断一个人值不值得深交，不看他口才多好、头衔多高，而是看他是否给人一种安心的感觉。
+            <div class="card-action article-tags" style="padding: 10px 20px;">
+              
+                <a href="/tags/%E8%87%AA%E6%88%91%E6%88%90%E9%95%BF/"><span class="chip bg-color">自我成长</span></a>
+              
+                <a href="/tags/%E8%B5%9A%E9%92%B1%E9%80%BB%E8%BE%91/"><span class="chip bg-color">赚钱逻辑</span></a>
+              
+                <a href="/tags/%E6%89%A7%E8%A1%8C%E5%8A%9B/"><span class="chip bg-color">执行力</span></a>
+              
+            </div>
+            
+          </div>
+          
+          <div class="card article" style="margin-bottom: 30px;">
+            <a href="/2025/07/08/4056063866/" style="text-decoration: none;">
+              <h3 style="margin: 20px; font-size: 1.6em;">判断一个人值不值得信赖，看他是否“让人安心”</h3>
+            </a>
+            <div class="card-content article-content" style="padding: 0 20px 10px 20px;">
+              <div class="summary block-with-text" style="margin-bottom: 10px;">
+                
+                  我们总说“识人不难”，可真正想判断一个人值不值得深交，不看他口才多好、头衔多高，而是看他是否给人一种安心的感觉。
 什么叫安心？就是你托付了一件事，过后不用反复追问；你发了一条消息，哪怕对方暂时没回，但你知道他不会彻底失联。靠谱的人，不吵不闹
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2025-07-08
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E8%87%AA%E6%88%91%E6%88%90%E9%95%BF/" class="post-category">
-                                    自我成长
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
+                
+              </div>
+              <div class="publish-info" style="font-size: 0.85em; color: gray;">
+                <span class="publish-date"><i class="far fa-clock fa-fw icon-date"></i>2025-07-08</span>
+                <span class="publish-author" style="margin-left: 10px;">
+                  
+                    <i class="fas fa-bookmark fa-fw icon-category"></i>
                     
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E5%8F%AF%E9%9D%A0%E7%9A%84%E4%BA%BA%E6%A0%BC/">
-                            <span class="chip bg-color">可靠的人格</span>
-                        </a>
-                        
-                        <a href="/tags/%E6%83%85%E7%BB%AA%E7%A8%B3%E5%AE%9A/">
-                            <span class="chip bg-color">情绪稳定</span>
-                        </a>
-                        
-                        <a href="/tags/%E4%BF%A1%E4%BB%BB%E5%BB%BA%E7%AB%8B/">
-                            <span class="chip bg-color">信任建立</span>
-                        </a>
-                        
-                    </div>
+                      <a href="/categories/%E8%87%AA%E6%88%91%E6%88%90%E9%95%BF/" class="post-category">自我成长</a>
                     
-                </div>
+                  
+                </span>
+              </div>
             </div>
-
-             <!-- 隐藏某个文章 -->
             
-             <!-- 隐藏某个文章 -->
-
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2025/07/08/2852910528/">
-                        <div class="card-image">
-
-                            
-
-                            <img src="/medias/featureimages/2025.jpg" class="responsive-img" alt="掌握社交广告魔法：零基础入门 Facebook 与 Instagram 的全面策略">
-                            <span class="card-title">掌握社交广告魔法：零基础入门 Facebook 与 Instagram 的全面策略</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                在数字时代，谁掌握了社交群体背后的流量密码，谁就拥有了变现的矿脉。Facebook 与 Instagram 早已不只是聊天或晒图的平台，而是品牌曝光、个人品牌打造与创业者引流的舞台。
+            <div class="card-action article-tags" style="padding: 10px 20px;">
+              
+                <a href="/tags/%E5%8F%AF%E9%9D%A0%E7%9A%84%E4%BA%BA%E6%A0%BC/"><span class="chip bg-color">可靠的人格</span></a>
+              
+                <a href="/tags/%E6%83%85%E7%BB%AA%E7%A8%B3%E5%AE%9A/"><span class="chip bg-color">情绪稳定</span></a>
+              
+                <a href="/tags/%E4%BF%A1%E4%BB%BB%E5%BB%BA%E7%AB%8B/"><span class="chip bg-color">信任建立</span></a>
+              
+            </div>
+            
+          </div>
+          
+          <div class="card article" style="margin-bottom: 30px;">
+            <a href="/2025/07/08/2852910528/" style="text-decoration: none;">
+              <h3 style="margin: 20px; font-size: 1.6em;">掌握社交广告魔法：零基础入门 Facebook 与 Instagram 的全面策略</h3>
+            </a>
+            <div class="card-content article-content" style="padding: 0 20px 10px 20px;">
+              <div class="summary block-with-text" style="margin-bottom: 10px;">
+                
+                  在数字时代，谁掌握了社交群体背后的流量密码，谁就拥有了变现的矿脉。Facebook 与 Instagram 早已不只是聊天或晒图的平台，而是品牌曝光、个人品牌打造与创业者引流的舞台。
 无论你是初涉社交广告的新手，还是希望突破增长天花板的营销
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2025-07-08
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E7%A4%BE%E5%AA%92%E8%90%A5%E9%94%80/" class="post-category">
-                                    社媒营销
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
+                
+              </div>
+              <div class="publish-info" style="font-size: 0.85em; color: gray;">
+                <span class="publish-date"><i class="far fa-clock fa-fw icon-date"></i>2025-07-08</span>
+                <span class="publish-author" style="margin-left: 10px;">
+                  
+                    <i class="fas fa-bookmark fa-fw icon-category"></i>
                     
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E5%B9%BF%E5%91%8A%E4%BC%98%E5%8C%96/">
-                            <span class="chip bg-color">广告优化</span>
-                        </a>
-                        
-                        <a href="/tags/%E7%A4%BE%E5%AA%92%E8%BF%90%E8%90%A5/">
-                            <span class="chip bg-color">社媒运营</span>
-                        </a>
-                        
-                        <a href="/tags/%E5%B9%BF%E5%91%8A%E8%BF%90%E8%90%A5/">
-                            <span class="chip bg-color">广告运营</span>
-                        </a>
-                        
-                    </div>
+                      <a href="/categories/%E7%A4%BE%E5%AA%92%E8%90%A5%E9%94%80/" class="post-category">社媒营销</a>
                     
-                </div>
+                  
+                </span>
+              </div>
             </div>
-
-             <!-- 隐藏某个文章 -->
             
-             <!-- 隐藏某个文章 -->
-
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2025/07/08/2209103712/">
-                        <div class="card-image">
-
-                            
-
-                            <img src="/medias/featureimages/2025.jpg" class="responsive-img" alt="复制不是抄袭，而是普通人通往财富的捷径">
-                            <span class="card-title">复制不是抄袭，而是普通人通往财富的捷径</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                你有没有想过：为什么有些人看起来轻轻松松就实现了财务自由？
+            <div class="card-action article-tags" style="padding: 10px 20px;">
+              
+                <a href="/tags/%E5%B9%BF%E5%91%8A%E4%BC%98%E5%8C%96/"><span class="chip bg-color">广告优化</span></a>
+              
+                <a href="/tags/%E7%A4%BE%E5%AA%92%E8%BF%90%E8%90%A5/"><span class="chip bg-color">社媒运营</span></a>
+              
+                <a href="/tags/%E5%B9%BF%E5%91%8A%E8%BF%90%E8%90%A5/"><span class="chip bg-color">广告运营</span></a>
+              
+            </div>
+            
+          </div>
+          
+          <div class="card article" style="margin-bottom: 30px;">
+            <a href="/2025/07/08/2209103712/" style="text-decoration: none;">
+              <h3 style="margin: 20px; font-size: 1.6em;">复制不是抄袭，而是普通人通往财富的捷径</h3>
+            </a>
+            <div class="card-content article-content" style="padding: 0 20px 10px 20px;">
+              <div class="summary block-with-text" style="margin-bottom: 10px;">
+                
+                  你有没有想过：为什么有些人看起来轻轻松松就实现了财务自由？
 不是他们运气好，也不是天赋异禀，而是他们掌握了一种朴素而高效的能力——复制并转化。
 一、赚钱，和“聪明”没什么关系赚钱这件事，说难很难，说简单也不难。关键不在于你有没有灵光一闪的点
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2025-07-08
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E6%B5%81%E9%87%8F%E5%8F%98%E7%8E%B0/" class="post-category">
-                                    流量变现
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
+                
+              </div>
+              <div class="publish-info" style="font-size: 0.85em; color: gray;">
+                <span class="publish-date"><i class="far fa-clock fa-fw icon-date"></i>2025-07-08</span>
+                <span class="publish-author" style="margin-left: 10px;">
+                  
+                    <i class="fas fa-bookmark fa-fw icon-category"></i>
                     
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E5%86%85%E5%AE%B9%E5%A4%8D%E5%88%B6/">
-                            <span class="chip bg-color">内容复制</span>
-                        </a>
-                        
-                        <a href="/tags/%E5%BC%95%E6%B5%81%E6%8A%80%E5%B7%A7/">
-                            <span class="chip bg-color">引流技巧</span>
-                        </a>
-                        
-                        <a href="/tags/%E5%89%AF%E4%B8%9A%E8%B5%9A%E9%92%B1/">
-                            <span class="chip bg-color">副业赚钱</span>
-                        </a>
-                        
-                    </div>
+                      <a href="/categories/%E6%B5%81%E9%87%8F%E5%8F%98%E7%8E%B0/" class="post-category">流量变现</a>
                     
-                </div>
+                  
+                </span>
+              </div>
             </div>
-
-             <!-- 隐藏某个文章 -->
             
+            <div class="card-action article-tags" style="padding: 10px 20px;">
+              
+                <a href="/tags/%E5%86%85%E5%AE%B9%E5%A4%8D%E5%88%B6/"><span class="chip bg-color">内容复制</span></a>
+              
+                <a href="/tags/%E5%BC%95%E6%B5%81%E6%8A%80%E5%B7%A7/"><span class="chip bg-color">引流技巧</span></a>
+              
+                <a href="/tags/%E5%89%AF%E4%B8%9A%E8%B5%9A%E9%92%B1/"><span class="chip bg-color">副业赚钱</span></a>
+              
+            </div>
+            
+          </div>
+          
+        </article>
+
+        
+      </section>
+    </div>
+
+    <div class="right-column">
+      <aside>
+        <!-- 侧边栏容器 -->
+<div class="sidebar-container">
+
+  <!-- 个人信息卡片（头像 + 网站名 + 描述 + 统计） -->
+  <section class="sidebar-section profile-card">
+    <!-- 头像 -->
+    <img src="/images/avatar.jpg" alt="头像" class="sidebar-avatar">
+
+    <!-- 网站名称 -->
+    <h1 class="site-title">心中之城</h1>
+
+    <!-- 网站描述 -->
+    <p class="site-description">一个心灵的栖息地唤醒你心底最初的纯真与渴望</p>
+
+    <!-- 统计数据 -->
+    <div class="stats-container">
+      <!-- 文章数 -->
+      <div class="stat-item">
+        <a href="/archives" class="stat-link">
+          <span class="stat-label">文章</span>
+          <span class="stat-number">4</span>
+        </a>
+      </div>
+
+      <!-- 标签数 -->
+      <div class="stat-item">
+        <a href="/tags" class="stat-link">
+          <span class="stat-label">标签</span>
+          <span class="stat-number">12</span>
+        </a>
+      </div>
+
+      <!-- 分类数 -->
+      <div class="stat-item">
+        <a href="/categories" class="stat-link">
+          <span class="stat-label">分类</span>
+          <span class="stat-number">4</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 公告模块 -->
+  <section class="sidebar-section announcement">
+    <h4 class="section-title">📢 公告</h4>
+    <div class="announcement-content">
+      <p class="announcement-text">
+        在这喧嚣与浮躁之中，愿你我都能找到一处心灵的净土。心中之城，是记忆的港湾，更是信念的归处。
+      </p>
+      <!-- 微信二维码 -->
+      <div class="qrcode-container">
+        <img src="/images/wechat-qrcode.jpg" alt="微信二维码" class="sidebar-qrcode">
+      </div>
+      <p class="contact-info">
+        需要进微信交流群、行业群、学习群的朋友<br>
+        加我微信：<strong>Zh711233</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- 最新文章模块 -->
+  <section class="sidebar-section recent-posts">
+    <h4 class="section-title">📌 最新文章</h4>
+    <ul class="post-list">
+      
+        <li class="post-item">
+          <a href="/2025/07/08/3759949150/" class="post-title">别困在“成长”的幻觉里，先为赚钱赋能自己</a>
+          <div class="post-meta">
+            <time class="post-date">2025-07-08</time>
+            <span class="post-reading-time">
+              <i class="iconfont icon-time"></i>
+              
+            </span>
+          </div>
+        </li>
+      
+        <li class="post-item">
+          <a href="/2025/07/08/4056063866/" class="post-title">判断一个人值不值得信赖，看他是否“让人安心”</a>
+          <div class="post-meta">
+            <time class="post-date">2025-07-08</time>
+            <span class="post-reading-time">
+              <i class="iconfont icon-time"></i>
+              
+            </span>
+          </div>
+        </li>
+      
+        <li class="post-item">
+          <a href="/2025/07/08/2852910528/" class="post-title">掌握社交广告魔法：零基础入门 Facebook 与 Instagram 的全面策略</a>
+          <div class="post-meta">
+            <time class="post-date">2025-07-08</time>
+            <span class="post-reading-time">
+              <i class="iconfont icon-time"></i>
+              
+            </span>
+          </div>
+        </li>
+      
+        <li class="post-item">
+          <a href="/2025/07/08/2209103712/" class="post-title">复制不是抄袭，而是普通人通往财富的捷径</a>
+          <div class="post-meta">
+            <time class="post-date">2025-07-08</time>
+            <span class="post-reading-time">
+              <i class="iconfont icon-time"></i>
+              
+            </span>
+          </div>
+        </li>
+      
+    </ul>
+  </section>
+
+  <!-- 最新评论模块（需评论插件支持） -->
+  <section class="sidebar-section recent-comments">
+    <h4 class="section-title">💬 最新评论</h4>
+    <div id="recent-comments">
+      <!-- Valine/Waline等评论插件会自动填充内容 -->
+      <p class="no-comments">暂无评论</p>
+    </div>
+  </section>
+
+  <!-- 分类模块 -->
+  <section class="sidebar-section categories">
+    <h4 class="section-title">🗂️ 分类</h4>
+    <div class="category-container">
+      
+        <div class="category-item">
+          <a href="/categories/%E5%88%9B%E4%B8%9A%E6%80%9D%E7%BB%B4/" class="category-link">
+            <span class="category-name">创业思维</span>
+            <span class="category-count">1</span>
+          </a>
         </div>
-    </article>
+      
+        <div class="category-item">
+          <a href="/categories/%E6%B5%81%E9%87%8F%E5%8F%98%E7%8E%B0/" class="category-link">
+            <span class="category-name">流量变现</span>
+            <span class="category-count">1</span>
+          </a>
+        </div>
+      
+        <div class="category-item">
+          <a href="/categories/%E7%A4%BE%E5%AA%92%E8%90%A5%E9%94%80/" class="category-link">
+            <span class="category-name">社媒营销</span>
+            <span class="category-count">1</span>
+          </a>
+        </div>
+      
+        <div class="category-item">
+          <a href="/categories/%E8%87%AA%E6%88%91%E6%88%90%E9%95%BF/" class="category-link">
+            <span class="category-name">自我成长</span>
+            <span class="category-count">1</span>
+          </a>
+        </div>
+      
+    </div>
+  </section>
+
+  <!-- 标签模块 -->
+  <section class="sidebar-section tags">
+    <h4 class="section-title">🏷️ 标签</h4>
+    <div class="tag-cloud">
+      <a href="/tags/%E4%BF%A1%E4%BB%BB%E5%BB%BA%E7%AB%8B/" style="font-size: 14px; color: #999">信任建立</a> <a href="/tags/%E5%86%85%E5%AE%B9%E5%A4%8D%E5%88%B6/" style="font-size: 14px; color: #999">内容复制</a> <a href="/tags/%E5%89%AF%E4%B8%9A%E8%B5%9A%E9%92%B1/" style="font-size: 14px; color: #999">副业赚钱</a> <a href="/tags/%E5%8F%AF%E9%9D%A0%E7%9A%84%E4%BA%BA%E6%A0%BC/" style="font-size: 14px; color: #999">可靠的人格</a> <a href="/tags/%E5%B9%BF%E5%91%8A%E4%BC%98%E5%8C%96/" style="font-size: 14px; color: #999">广告优化</a> <a href="/tags/%E5%B9%BF%E5%91%8A%E8%BF%90%E8%90%A5/" style="font-size: 14px; color: #999">广告运营</a> <a href="/tags/%E5%BC%95%E6%B5%81%E6%8A%80%E5%B7%A7/" style="font-size: 14px; color: #999">引流技巧</a> <a href="/tags/%E6%83%85%E7%BB%AA%E7%A8%B3%E5%AE%9A/" style="font-size: 14px; color: #999">情绪稳定</a> <a href="/tags/%E6%89%A7%E8%A1%8C%E5%8A%9B/" style="font-size: 14px; color: #999">执行力</a> <a href="/tags/%E7%A4%BE%E5%AA%92%E8%BF%90%E8%90%A5/" style="font-size: 14px; color: #999">社媒运营</a> <a href="/tags/%E8%87%AA%E6%88%91%E6%88%90%E9%95%BF/" style="font-size: 14px; color: #999">自我成长</a> <a href="/tags/%E8%B5%9A%E9%92%B1%E9%80%BB%E8%BE%91/" style="font-size: 14px; color: #999">赚钱逻辑</a>
+    </div>
+  </section>
+
+  <!-- 归档模块 -->
+  <section class="sidebar-section archives">
+    <h4 class="section-title">📅 归档</h4>
+    <div class="archive-list">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/07/">07月2025年</a><span class="archive-list-count">4</span></li></ul>
+    </div>
+  </section>
+
+  <!-- 网站资讯模块 -->
+  <section class="sidebar-section site-info">
+    <h4 class="section-title">📊 网站资讯</h4>
+    <ul class="info-list">
+      <li class="info-item">
+        <span class="info-label">文章数目：</span>
+        <span class="info-value">4</span>
+      </li>
+      <li class="info-item">
+        <span class="info-label">本站总字数：</span>
+        <span class="info-value">6,127 字</span>
+      </li>
+      <li class="info-item">
+        <span class="info-label">最后更新时间：</span>
+        <span class="info-value">2025-07-08</span>
+      </li>
+    </ul>
+  </section>
+
+</div>
+
+      </aside>
+    </div>
+
+  </div>
 
 </main>
-
-
 
 
     <footer class="page-footer bg-color">
@@ -1163,5 +1264,5 @@
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-</body>
+  </body>
 </html>

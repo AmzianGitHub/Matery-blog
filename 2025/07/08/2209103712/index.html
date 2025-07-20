@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html lang="zh-CN">
-
+  
 
 <head>
     <meta charset="utf-8">
@@ -57,7 +57,13 @@
 <meta name="generator" content="Hexo 7.3.0"></head>
 
 
-<body>
+  <head>
+    <!-- 原有 head 内容已包含在 _partial/head 中 -->
+    <!-- 这里额外加入自定义样式 -->
+    <link rel="stylesheet" href="/css/my.css">
+  </head>
+
+  <body>
     <!-- ✅ 全局背景层：初始透明，滚动时渐显 -->
     <div id="global-bg"></div>
 
@@ -1209,5 +1215,5 @@
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-</body>
+  </body>
 </html>
